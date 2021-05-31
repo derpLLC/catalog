@@ -5,12 +5,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Catalog App'),
+        centerTitle: true,
+      ),
+      body: Center(
         child: Container(
           child: Text("Initial App"),
         ),
       ),
+      drawer: Drawer(),
     );
   }
 }
