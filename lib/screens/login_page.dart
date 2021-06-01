@@ -1,3 +1,4 @@
+import 'package:catalog/utils/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,7 @@ class LoginPage extends StatelessWidget {
                       minimumSize: Size(150.0, 40),
                     ),
                     onPressed: () {
-                      print('Login Successful');
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
                   ),
                 ],
