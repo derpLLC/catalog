@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.system,
       theme: ThemeData(
-        fontFamily: GoogleFonts.lato().fontFamily,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primarySwatch: Colors.deepPurple
       ),
       initialRoute: 'login_page',
       routes: {
-        'home_page': (context)  => HomePage(),
-        'login_page': (context)=> LoginPage(),
+        'home_page': (context) => HomePage(),
+        'login_page': (context) => LoginPage(),
       },
     );
   }
