@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -11,6 +12,13 @@ class LoginPage extends StatelessWidget {
           Image.asset(
               "assets/images/login.png",
             fit: BoxFit.cover,
+          ),
+          Text(
+              "Welcome",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24.0,
+            ),
           ),
         ],
       ),
