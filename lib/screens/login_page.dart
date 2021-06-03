@@ -60,15 +60,37 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  ElevatedButton(
-                    child: Text('Login'),
-                    style: TextButton.styleFrom(
-                      minimumSize: Size(150.0, 40),
-                    ),
-                    onPressed: () {
+                  InkWell(
+                    onTap: () {
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 40.0,
+                      width: 150.0,
+                      child: Text(
+                          'Login',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
                   ),
+                  // ElevatedButton(
+                  //   child: Text('Login'),
+                  //   style: TextButton.styleFrom(
+                  //     minimumSize: Size(150.0, 40),
+                  //   ),
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  //   },
+                  // ),
                 ],
               ),
             ),
