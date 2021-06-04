@@ -8,6 +8,7 @@ class MyDrawer extends StatelessWidget {
 
     return Drawer(
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
             padding: EdgeInsets.zero,
