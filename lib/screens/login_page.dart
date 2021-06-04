@@ -61,31 +61,31 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  InkWell(
-                    onTap: () async {
-                      setState(() {
-                        changeButton = true;
-                      });
+                  Material(
+                    borderRadius: BorderRadius.circular(changeButton? 50:8.0),
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () async {
+                        setState(() {
+                          changeButton = true;
+                        });
 
-                      await Future.delayed(Duration(seconds: 1));
-                      Navigator.pushNamed(context, MyRoutes.homeRoute);
-                    },
-                    child: AnimatedContainer(
-                      duration: Duration(seconds: 1),
-                      alignment: Alignment.center,
-                      height: 40.0,
-                      width: changeButton? 50.0:150,
-                      child:changeButton?Icon(Icons.done, color: Colors.white): Text(
-                          'Login',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                        await Future.delayed(Duration(seconds: 1));
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      },
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 1),
+                        alignment: Alignment.center,
+                        height: 40.0,
+                        width: changeButton? 50.0:150,
+                        child:changeButton?Icon(Icons.done, color: Colors.white): Text(
+                            'Login',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(changeButton? 50:8.0),
                       ),
                     ),
                   ),
