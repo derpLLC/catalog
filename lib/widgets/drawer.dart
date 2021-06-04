@@ -7,21 +7,24 @@ class MyDrawer extends StatelessWidget {
     final imageURL= "https://avatars.githubusercontent.com/u/25736781?v=4";
 
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          DrawerHeader(
-            padding: EdgeInsets.zero,
-            child: UserAccountsDrawerHeader(
-              margin: EdgeInsets.zero,
-              accountName: Text('Ayush Dubey'),
-              accountEmail: Text('ayushdubey70@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage(imageURL),
+      child: Container(
+        color: Colors.deepPurple,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              padding: EdgeInsets.zero,
+              child: UserAccountsDrawerHeader(
+                margin: EdgeInsets.zero,
+                accountName: Text('Ayush Dubey'),
+                accountEmail: Text('ayushdubey70@gmail.com'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(imageURL),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
