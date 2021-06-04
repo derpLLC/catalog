@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final imageURL= "https://avatars.githubusercontent.com/u/25736781?v=4";
+
     return Drawer(
       child: ListView(
         children: [
@@ -12,6 +15,7 @@ class MyDrawer extends StatelessWidget {
               margin: EdgeInsets.zero,
               accountName: Text('Ayush Dubey'),
               accountEmail: Text('ayushdubey70@gmail.com'),
+              currentAccountPicture: Image.network(imageURL),
             ),
           ),
         ],
