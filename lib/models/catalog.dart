@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class Catalog {
+class CatalogModel {
   static final items = [
     Item(
       id: 1,
