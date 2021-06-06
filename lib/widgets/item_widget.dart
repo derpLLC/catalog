@@ -1,4 +1,5 @@
 import 'package:catalog/models/catalog.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemWidget extends StatelessWidget {
@@ -12,7 +13,12 @@ class ItemWidget extends StatelessWidget {
       leading: Image.network(item.image),
       title: Text(item.name),
       subtitle: Text(item.desc),
-      trailing: Text("\$${item.price}"),
+      trailing: Text("\$${item.price}",
+      textScaleFactor: 1.5,
+      style: TextStyle(
+        color: Colors.deepPurple,
+        fontWeight: FontWeight.bold,
+      ),),
     );
   }
 }
