@@ -3,9 +3,12 @@ import 'package:catalog/widgets/drawer.dart';
 import 'package:catalog/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
