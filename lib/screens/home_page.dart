@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/widgets/drawer.dart';
 import 'package:catalog/widgets/item_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,6 +47,7 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (context, index) {
                   final item = CatalogModel.items[index];
                   return Card(
+                    clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
