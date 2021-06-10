@@ -52,7 +52,9 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: GridTile(
+                      header: Text(item.name),
                       child: Image.network(item.image),
+                      footer: Text(item.price.toString()),
                     ),
                   );
                 },
