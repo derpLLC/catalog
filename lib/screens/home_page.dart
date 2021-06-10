@@ -60,7 +60,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-              )
+          itemCount: CatalogModel.items.length,
+        )
             : Center(
                 child: CircularProgressIndicator(),
               ),
