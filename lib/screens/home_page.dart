@@ -54,14 +54,36 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: GridTile(
-                      header: Text(item.name),
+                      header: Container(
+                        child: Text(
+                          item.name,
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        padding: EdgeInsets.all(12.0),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                        ),
+                      ),
                       child: Image.network(item.image),
-                      footer: Text(item.price.toString()),
+                      footer: Container(
+                        child: Text(
+                          item.price.toString(),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        padding: EdgeInsets.all(12.0),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   );
                 },
-          itemCount: CatalogModel.items.length,
-        )
+                itemCount: CatalogModel.items.length,
+              )
             : Center(
                 child: CircularProgressIndicator(),
               ),
