@@ -42,12 +42,12 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CatalogHeader(),
-              if(CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                 CatalogList()
-               else
-                 Center(
-                   child: CircularProgressIndicator(),
-               )
+              else
+                Center(
+                  child: CircularProgressIndicator(),
+                )
             ],
           ),
         ),
@@ -74,7 +74,24 @@ class CatalogHeader extends StatelessWidget {
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView.builder(
+      itemCount: CatalogModel.items.length,
+      itemBuilder: (context, index) {
+        final catalog = CatalogModel.items[index];
+        return CatalogItem(catalog: catalog);
+      },
+    );
   }
 }
 
+class CatalogItem extends StatelessWidget {
+  final Item catalog;
+
+  const CatalogItem({Key key, @required this.catalog})
+      : assert(catalog != null),
+        super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return CatalogItem();
+  }
+}
