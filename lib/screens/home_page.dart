@@ -95,7 +95,8 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
       child: Row(
         children: [
-          Image.network(catalog.image),
+          Image.network(catalog.image
+          ).box.rounded.p8.color(MyTheme.creamColor).make().p16().w40(context),
         ],
       )
     ).white.roundedLg.square(150).make().py16();
