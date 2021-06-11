@@ -1,8 +1,6 @@
 import 'dart:convert';
 
 import 'package:catalog/models/catalog.dart';
-import 'package:catalog/widgets/drawer.dart';
-import 'package:catalog/widgets/item_widget.dart';
 import 'package:catalog/widgets/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
