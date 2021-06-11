@@ -105,6 +105,7 @@ class CatalogItem extends StatelessWidget {
               catalog.desc.text.textStyle(context.captionStyle).make(),
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
+                buttonPadding: Vx.mH8,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
                   ElevatedButton(
