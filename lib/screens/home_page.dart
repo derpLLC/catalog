@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               CatalogHeader(),
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList()
+                CatalogList().expand()
               else
                 Center(
                   child: CircularProgressIndicator(),
@@ -73,6 +73,7 @@ class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
         final catalog = CatalogModel.items[index];
@@ -90,6 +91,12 @@ class CatalogItem extends StatelessWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    return CatalogItem();
+    return VxBox(
+      child: Row(
+        children: [
+          Image.network(catalog.image),
+        ],
+      )
+    ).white.square(100).make();
   }
 }
