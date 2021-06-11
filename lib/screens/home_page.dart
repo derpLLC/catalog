@@ -98,6 +98,6 @@ class CatalogItem extends StatelessWidget {
           Image.network(catalog.image),
         ],
       )
-    ).white.roundedLg.square(100).make().py16();
+    ).white.roundedLg.square(150).make().py16();
   }
 }
