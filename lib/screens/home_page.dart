@@ -38,7 +38,18 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
-          child: CatalogHeader(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CatalogHeader(),
+              if(CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                CatalogList()
+               else
+                 Center(
+                   child: CircularProgressIndicator(),
+               )
+            ],
+          ),
         ),
       ),
     );
@@ -46,7 +57,6 @@ class _HomePageState extends State<HomePage> {
 }
 
 class CatalogHeader extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -58,6 +68,13 @@ class CatalogHeader extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CatalogList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
 
