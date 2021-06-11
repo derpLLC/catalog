@@ -103,9 +103,10 @@ class CatalogItem extends StatelessWidget {
             children: [
               catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).make(),
+              10.heightBox,
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding: Vx.mH8,
+                buttonPadding: EdgeInsets.zero,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
                   ElevatedButton(
@@ -117,10 +118,10 @@ class CatalogItem extends StatelessWidget {
                     child: "Buy".text.make(),
                   ),
                 ],
-              ),
+              ).pOnly(right: 8.0),
             ],
           ),
-        )
+        ),
       ],
     )).white.roundedLg.square(150).make().py16();
   }
