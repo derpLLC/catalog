@@ -104,6 +104,11 @@ class CatalogItem extends StatelessWidget {
           children: [
             catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
             catalog.desc.text.textStyle(context.captionStyle).make(),
+            ButtonBar(
+              children: [
+                catalog.price.text.make(),
+              ],
+            ),
           ],
         ),
         )
