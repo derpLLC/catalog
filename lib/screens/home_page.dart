@@ -93,12 +93,29 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VxBox(
-      child: Row(
-        children: [
-          Image.network(catalog.image
-          ).box.rounded.p8.color(MyTheme.creamColor).make().p16().w40(context),
-        ],
-      )
-    ).white.roundedLg.square(150).make().py16();
+        child: Row(
+      children: [
+        CatalogImage(image: catalog.image),
+      ],
+    )).white.roundedLg.square(150).make().py16();
+  }
+}
+
+class CatalogImage extends StatelessWidget {
+  final String image;
+
+  const CatalogImage({Key key, @required this.image})
+      : assert(image != null),
+        super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(image)
+        .box
+        .rounded
+        .p8
+        .color(MyTheme.creamColor)
+        .make()
+        .p16()
+        .w40(context);
   }
 }
