@@ -103,6 +103,7 @@ class CatalogItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+            catalog.desc.text.textStyle(context.captionStyle).make(),
           ],
         ),
         )
