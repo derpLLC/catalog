@@ -104,6 +104,7 @@ class CatalogItem extends StatelessWidget {
               catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).make(),
               ButtonBar(
+                alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
                   ElevatedButton(
