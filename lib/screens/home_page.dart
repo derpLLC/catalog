@@ -106,7 +106,7 @@ class CatalogItem extends StatelessWidget {
             catalog.desc.text.textStyle(context.captionStyle).make(),
             ButtonBar(
               children: [
-                "\$${catalog.price}".text.make(),
+                "\$${catalog.price}".text.bold.xl.make(),
               ],
             ),
           ],
