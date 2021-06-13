@@ -17,7 +17,10 @@ class HomeDetailPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Image.network(catalog.image),
+            Hero(
+              tag: catalog.image.toString(),
+              child: Image.network(catalog.image),
+            ),
           ],
         ).p16(),
       ),
