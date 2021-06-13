@@ -13,6 +13,7 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
         child: Column(
