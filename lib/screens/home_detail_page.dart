@@ -17,7 +17,7 @@ class HomeDetailPage extends StatelessWidget {
           children: [
             Image.network(catalog.image),
           ],
-        ),
+        ).p16(),
       ),
     );
   }
