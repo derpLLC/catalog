@@ -12,10 +12,12 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Image.network(catalog.image),
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            Image.network(catalog.image),
+          ],
+        ),
       ),
     );
   }
