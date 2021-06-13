@@ -1,4 +1,5 @@
 import 'package:catalog/models/catalog.dart';
+import 'package:catalog/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -12,6 +13,7 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: MyTheme.creamColor,
       body: SafeArea(
         child: Column(
           children: [
