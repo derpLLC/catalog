@@ -16,14 +16,33 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(),
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
+        bottom: false,
         child: Column(
           children: [
             Hero(
               tag: catalog.image.toString(),
               child: Image.network(catalog.image),
-            ),
+            ).h32(context),
+            Expanded(
+              child: VxArc(
+                height: 30,
+                arcType: VxArcType.CONVEY,
+                edge: VxEdge.TOP,
+                child: Container(
+                  color: Colors.white,
+                  width: context.screenWidth,
+                  child: Column(
+                    children: [
+                      catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                      catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                      10.heightBox,
+                    ],
+                  ).py64(),
+                ),
+              ),
+            )
           ],
-        ).p16(),
+        ),
       ),
     );
   }
