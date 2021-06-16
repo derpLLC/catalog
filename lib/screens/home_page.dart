@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: MyTheme.creamColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        child: Icon(CupertinoIcons.cart),
       ),
       body: SafeArea(
         child: Container(
