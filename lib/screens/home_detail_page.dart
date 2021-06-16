@@ -68,7 +68,7 @@ class HomeDetailPage extends StatelessWidget {
                       "Dolor sea takimata ipsum sea eirmod aliquyam est. Eos ipsum voluptua eirmod elitr, no dolor dolor amet eirmod dolor labore dolores magna. Amet vero vero vero kasd, dolore sea sed sit invidunt nonumy est sit clita. Diam aliquyam amet tempor diam no aliquyam invidunt. Elitr lorem eirmod dolore clita. Rebum."
                           .text
                           .textStyle(context.captionStyle)
-                          .make().p8().expand(),
+                          .make().p16().expand(),
                     ],
                   ).py64(),
                 ),
