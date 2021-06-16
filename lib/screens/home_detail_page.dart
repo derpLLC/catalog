@@ -28,7 +28,7 @@ class HomeDetailPage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                 backgroundColor:
-                MaterialStateProperty.all(MyTheme.darkBluishColor),
+                    MaterialStateProperty.all(MyTheme.darkBluishColor),
                 shape: MaterialStateProperty.all(
                   StadiumBorder(),
                 ),
@@ -56,9 +56,19 @@ class HomeDetailPage extends StatelessWidget {
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
-                      catalog.desc.text.textStyle(context.captionStyle).xl.make(),
+                      catalog.name.text.xl4
+                          .color(MyTheme.darkBluishColor)
+                          .bold
+                          .make(),
+                      catalog.desc.text
+                          .textStyle(context.captionStyle)
+                          .xl
+                          .make(),
                       10.heightBox,
+                      "Dolor sea takimata ipsum sea eirmod aliquyam est. Eos ipsum voluptua eirmod elitr, no dolor dolor amet eirmod dolor labore dolores magna. Amet vero vero vero kasd, dolore sea sed sit invidunt nonumy est sit clita. Diam aliquyam amet tempor diam no aliquyam invidunt. Elitr lorem eirmod dolore clita. Rebum."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make().p8(),
                     ],
                   ).py64(),
                 ),
