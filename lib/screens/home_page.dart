@@ -36,6 +36,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyTheme.creamColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
