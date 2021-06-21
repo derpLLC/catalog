@@ -9,6 +9,7 @@ class MyTheme {
         cardColor: Colors.white,
         canvasColor: creamColor,
         buttonColor: darkBluishColor,
+        accentColor: darkBluishColor,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -23,6 +24,7 @@ class MyTheme {
         cardColor: Colors.black,
         canvasColor: darkCreamColor,
         buttonColor: lightBluishColor,
+        accentColor: Colors.white,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
