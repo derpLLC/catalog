@@ -17,6 +17,8 @@ class MyTheme {
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,
         primarySwatch: Colors.deepPurple,
+        cardColor: Colors.black,
+        canvasColor: darkCreamColor,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -27,7 +29,7 @@ class MyTheme {
 
   //Colors
   static Color creamColor = Color(0xfff5f5f5);
-  static Color darkCreamColor = Vx.gray800;
+  static Color darkCreamColor = Vx.gray900;
   static Color darkBluishColor = Color(0xff403b58);
   static Color lightBluishColor = Vx.indigo500;
 }
