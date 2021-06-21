@@ -8,7 +8,7 @@ class MyTheme {
         primarySwatch: Colors.deepPurple,
         cardColor: Colors.white,
         canvasColor: creamColor,
-        buttonColor: lightBluishColor,
+        buttonColor: darkBluishColor,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -22,7 +22,7 @@ class MyTheme {
         primarySwatch: Colors.deepPurple,
         cardColor: Colors.black,
         canvasColor: darkCreamColor,
-        buttonColor: darkBluishColor,
+        buttonColor: lightBluishColor,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
