@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           Navigator.pushNamed(context, MyRoutes.cartRoute);
         },
         child: Icon(CupertinoIcons.cart),
-        backgroundColor: MyTheme.darkBluishColor,
+        backgroundColor: context.theme.buttonColor,
       ),
       body: SafeArea(
         child: Container(
