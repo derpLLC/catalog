@@ -19,6 +19,7 @@ class MyTheme {
       );
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
+        brightness: Brightness.dark,
         fontFamily: GoogleFonts.poppins().fontFamily,
         primarySwatch: Colors.deepPurple,
         cardColor: Colors.black,
