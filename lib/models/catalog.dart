@@ -1,20 +1,25 @@
 import 'package:flutter/cupertino.dart';
+import 'dart:convert';
 
 class CatalogModel {
   static List<Item> items;
+
+  // Get item by ID
+  static Item getById(int id) => items.firstWhere((element) => element.id == id, orElse: null);
+
+// Get item by Position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
-  final int id;
+  int id;
   final String name;
   final String desc;
   final num price;
   final String color;
   final String image;
 
-//<editor-fold desc="Data Methods" defaultstate="collapsed">
-
-  const Item({
+  Item({
     @required this.id,
     @required this.name,
     @required this.desc,
