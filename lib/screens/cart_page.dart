@@ -28,6 +28,7 @@ class _CartTotal extends StatelessWidget {
     return SizedBox(
       height: 200,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           "\$9999".text.xl5.color(context.theme.accentColor).make(),
           30.widthBox,
