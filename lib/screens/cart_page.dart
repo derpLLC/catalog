@@ -36,7 +36,7 @@ class _CartTotal extends StatelessWidget {
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.accentColor),
               ),
               child: "Buy".text.white.make()
-          ),
+          ).w32(context),
         ],
       ),
     );
