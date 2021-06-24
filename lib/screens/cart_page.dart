@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -39,6 +40,28 @@ class _CartTotal extends StatelessWidget {
           ).w32(context),
         ],
       ),
+    );
+  }
+}
+
+class _CartList extends StatefulWidget {
+  @override
+  __CartListState createState() => __CartListState();
+}
+
+class __CartListState extends State<_CartList> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: 5,
+        itemBuilder: (context, index) => ListTile(
+          leading: Icon(Icons.done),
+          trailing: IconButton(
+            icon: Icon(Icons.remove_circle_outline),
+            onPressed: () {},
+          ),
+          title: "Item 1".text.make(),
+        ),
     );
   }
 }
