@@ -31,7 +31,11 @@ class _CartTotal extends StatelessWidget {
         children: [
           "\$9999".text.xl5.color(context.theme.accentColor).make(),
           30.widthBox,
-          TextButton(onPressed: () {}, child: "Buy".text.color(context.theme.buttonColor).make()),
+          ElevatedButton(onPressed: () {},
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.accentColor),
+              ),
+              child: "Buy".text.white.make()
+          ),
         ],
       ),
     );
