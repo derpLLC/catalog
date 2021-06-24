@@ -14,7 +14,7 @@ class CartPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Placeholder().p32().expand(),
+          _CartList().p32().expand(),
           Divider(),
           _CartTotal(),
         ],
