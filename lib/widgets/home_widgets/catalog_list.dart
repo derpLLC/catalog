@@ -11,16 +11,16 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.getByPosition(index);
+        final catalog = CatalogModel.items[index];
         return InkWell(
             onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomeDetailPage(
-                  catalog: catalog,
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeDetailPage(
+                      catalog: catalog,
+                    ),
+                  ),
                 ),
-              ),
-            ),
             child: CatalogItem(catalog: catalog));
       },
     );
@@ -40,7 +40,7 @@ class CatalogItem extends StatelessWidget {
       children: [
         Hero(
           tag: catalog.image.toString(),
-            child: CatalogImage(image: catalog.image),
+          child: CatalogImage(image: catalog.image),
         ),
         Expanded(
           child: Column(

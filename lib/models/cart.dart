@@ -1,7 +1,6 @@
 import 'catalog.dart';
 
 class CartModel {
-
   // Catalog Field
   CatalogModel _catalog;
 
@@ -16,4 +15,7 @@ class CartModel {
     assert(newCatalog != null);
     _catalog = newCatalog;
   }
+
+  // Get items in the cart
+  List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
 }
