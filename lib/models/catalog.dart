@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'dart:convert';
 
 class CatalogModel {
   static List<Item> items;
