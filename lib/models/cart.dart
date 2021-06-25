@@ -18,4 +18,8 @@ class CartModel {
 
   // Get items in the cart
   List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
+
+  // Get Total price
+  num get totalPrice =>
+      items.fold(0, (total, current) => total + current.price);
 }
