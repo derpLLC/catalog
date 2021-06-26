@@ -1,3 +1,4 @@
+import 'package:catalog/models/cart.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/screens/home_detail_page.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,7 @@ class CatalogItem extends StatelessWidget {
                 buttonPadding: EdgeInsets.zero,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
-                  _AddToCart(),
+                  _AddToCart(catalog: catalog),
                 ],
               ).pOnly(right: 8.0),
             ],
@@ -67,7 +68,8 @@ class CatalogItem extends StatelessWidget {
 }
 
 class _AddToCart extends StatefulWidget {
-  const _AddToCart({Key key}) : super(key: key);
+  final Item catalog;
+  const _AddToCart({Key key, this.catalog}) : super(key: key);
 
   @override
   __AddToCartState createState() => __AddToCartState();
@@ -82,8 +84,11 @@ class __AddToCartState extends State<_AddToCart> {
     return ElevatedButton(
       onPressed: () {
         isAdded = isAdded.toggle();
-        setState(() {
-        });
+        final _catalog = CatalogModel();
+        final _cart = CartModel();
+        _cart.catalog = _catalog;
+        _cart.add(widget.catalog);
+        setState(() {});
       },
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
