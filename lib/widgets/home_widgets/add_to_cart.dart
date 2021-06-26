@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:catalog/models/cart.dart';
 import 'package:catalog/models/catalog.dart';
@@ -33,7 +34,7 @@ class _AddToCartState extends State<AddToCart> {
           StadiumBorder(),
         ),
       ),
-      child: isInCart ? Icon(Icons.done) : "Add to cart".text.make(),
+      child: isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus),
     );
   }
 }
