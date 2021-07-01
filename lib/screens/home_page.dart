@@ -51,7 +51,15 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           ),
           backgroundColor: context.theme.buttonColor,
-        ).badge(color: Vx.red500, count: _cart.items.length, size: 20),
+        ).badge(
+          color: Vx.red500,
+          count: _cart.items.length,
+          size: 22,
+          textStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
       ),
       body: SafeArea(
         child: Container(
