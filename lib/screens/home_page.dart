@@ -10,6 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,6 +18,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final url = "https://api.jsonbin.io/b/60ddd99555b7245a20d3199c";
+
   @override
   void initState() {
     super.initState();
@@ -25,8 +28,10 @@ class _HomePageState extends State<HomePage> {
 
   void loadData() async {
     await Future.delayed(Duration(seconds: 2));
-    final catalogJson =
-        await rootBundle.loadString("assets/files/catalog.json");
+    // final catalogJson =
+    //     await rootBundle.loadString("assets/files/catalog.json");
+    final response = await http.get(Uri.parse(url));
+    final catalogJson = response.body;
     final decodeData = jsonDecode(catalogJson);
     var productData = decodeData["products"];
     CatalogModel.items =
