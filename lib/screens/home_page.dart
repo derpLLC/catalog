@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:catalog/core/store.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/utils/routes.dart';
 import 'package:catalog/widgets/home_widgets/catalog_header.dart';
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: context
           .canvasColor, //Theme.of(context).canvasColor if not using VelocityX
@@ -46,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.white,
         ),
         backgroundColor: context.theme.buttonColor,
-      ),
+      ).badge(color: Vx.red500, count: _cart.items.length, size: 20),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
