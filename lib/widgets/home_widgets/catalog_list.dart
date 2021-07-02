@@ -8,7 +8,7 @@ import 'catalog_image.dart';
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Vx.isWeb
+    return !context.isMobile
         ? GridView.builder(
             gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
