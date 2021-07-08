@@ -1,4 +1,7 @@
+import 'package:catalog/core/store.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class CatalogModel {
   static List<Item> items;
@@ -103,7 +106,20 @@ class Item {
       'image': this.image,
     } as Map<String, dynamic>;
   }
+}
 
-//</editor-fold>
+class SearchMutation extends VxMutation<MyStore> {
+  final String query;
 
+  SearchMutation(this.query);
+  @override
+  perform() {
+    if (query.length >= 1) {
+      store.items = CatalogModel.items
+          .where((el) => el.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    } else {
+      store.items = CatalogModel.items;
+    }
+  }
 }

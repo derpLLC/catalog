@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
     var productData = decodeData["products"];
     CatalogModel.items =
         List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+    (VxState.store as MyStore).items = CatalogModel.items;
     setState(() {});
   }
 
@@ -72,7 +73,11 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CatalogHeader(),
-              CupertinoSearchTextField().py12(),
+              CupertinoSearchTextField(
+                onChanged: (value) {
+                  SearchMutation(value);
+                },
+              ).py12(),
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                 CatalogList().py16().expand()
               else
