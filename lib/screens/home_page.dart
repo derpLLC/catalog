@@ -74,6 +74,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               CatalogHeader(),
               CupertinoSearchTextField(
+                borderRadius: BorderRadius.circular(10),
                 onChanged: (value) {
                   SearchMutation(value);
                 },
