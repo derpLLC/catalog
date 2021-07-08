@@ -10,47 +10,49 @@ class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final MyStore store = VxState.store;
-    return VxBuilder(
-      mutations: {SearchMutation},
-      builder: (context, store, status) => !context.isMobile
-          ? GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 20,
+    return Scrollbar(
+      child: VxBuilder(
+        mutations: {SearchMutation},
+        builder: (context, store, status) => !context.isMobile
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                ),
+                shrinkWrap: true,
+                itemCount: store.items.length,
+                itemBuilder: (context, index) {
+                  final catalog = store.items[index];
+                  return InkWell(
+                      onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeDetailPage(
+                                catalog: catalog,
+                              ),
+                            ),
+                          ),
+                      child: CatalogItem(catalog: catalog));
+                },
+              )
+            : ListView.builder(
+                shrinkWrap: true,
+                itemCount: store.items.length,
+                itemBuilder: (context, index) {
+                  final catalog = store.items[index];
+                  return InkWell(
+                      onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeDetailPage(
+                                catalog: catalog,
+                              ),
+                            ),
+                          ),
+                      child: CatalogItem(catalog: catalog));
+                },
               ),
-              shrinkWrap: true,
-              itemCount: store.items.length,
-              itemBuilder: (context, index) {
-                final catalog = store.items[index];
-                return InkWell(
-                    onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeDetailPage(
-                              catalog: catalog,
-                            ),
-                          ),
-                        ),
-                    child: CatalogItem(catalog: catalog));
-              },
-            )
-          : ListView.builder(
-              shrinkWrap: true,
-              itemCount: store.items.length,
-              itemBuilder: (context, index) {
-                final catalog = store.items[index];
-                return InkWell(
-                    onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeDetailPage(
-                              catalog: catalog,
-                            ),
-                          ),
-                        ),
-                    child: CatalogItem(catalog: catalog));
-              },
-            ),
+      ),
     );
   }
 }
