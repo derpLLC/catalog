@@ -57,6 +57,18 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ],
               ),
+              CupertinoFormSection(
+                header: "Terms & Conditions".text.make(),
+                children: [
+                  CupertinoFormRow(
+                    child: CupertinoSwitch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
+                    prefix: "I Agree".text.make(),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
