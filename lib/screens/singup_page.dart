@@ -69,6 +69,27 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ],
               ),
+              20.heightBox,
+              Material(
+                color: context.theme.buttonColor,
+                borderRadius: BorderRadius.circular(8),
+                child: InkWell(
+                  child: AnimatedContainer(
+                    duration: Duration(seconds: 1),
+                    width: 150,
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "SignUp",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
+              ).centered(),
             ],
           ),
         ),
