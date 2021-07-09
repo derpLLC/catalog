@@ -1,6 +1,7 @@
 import 'package:catalog/core/store.dart';
 import 'package:catalog/screens/cart_page.dart';
 import 'package:catalog/screens/login_page.dart';
+import 'package:catalog/screens/singup_page.dart';
 import 'package:catalog/utils/routes.dart';
 import 'package:catalog/widgets/theme.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +24,12 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.singupRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.singupRoute: (context) => SignUpPage(),
         MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
