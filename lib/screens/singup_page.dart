@@ -43,6 +43,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                   CupertinoFormRow(
                     child: CupertinoTextFormFieldRow(
+                      obscureText: true,
                       placeholder: "Enter Password",
                     ),
                     prefix: "Password".text.make(),
