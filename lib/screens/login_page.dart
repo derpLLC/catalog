@@ -117,6 +117,17 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 40),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.singupRoute);
+                      },
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all(context.accentColor),
+                      ),
+                      child: "Sing Up".text.headline6(context).make(),
+                    ),
                   ],
                 ),
               ),
