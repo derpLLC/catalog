@@ -3,9 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
 
+  @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+  bool _value = false;
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +80,8 @@ class SignUpPage extends StatelessWidget {
                   children: [
                     CupertinoFormRow(
                       child: CupertinoSwitch(
-                        value: true,
-                        onChanged: (value) {},
+                        value: _value,
+                        onChanged: (bool value){},
                       ),
                       prefix: "I Agree".text.make(),
                     ),
