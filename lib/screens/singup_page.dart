@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SignUpPage extends StatefulWidget {
-
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
@@ -81,7 +80,11 @@ class _SignUpPageState extends State<SignUpPage> {
                     CupertinoFormRow(
                       child: CupertinoSwitch(
                         value: _value,
-                        onChanged: (bool value){},
+                        onChanged: (bool value) {
+                          setState(() {
+                            _value = value;
+                          });
+                        },
                       ),
                       prefix: "I Agree".text.make(),
                     ),
