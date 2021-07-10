@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SignUpPage extends StatelessWidget {
+
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +49,12 @@ class SignUpPage extends StatelessWidget {
                     child: CupertinoTextFormFieldRow(
                       obscureText: true,
                       placeholder: "Enter Password",
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return "Password cannot be empty";
+                        } else
+                          return null;
+                      },
                     ),
                     prefix: "Password".text.make(),
                   ),
