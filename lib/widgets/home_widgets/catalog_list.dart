@@ -1,4 +1,3 @@
-import 'package:catalog/core/store.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/screens/home_detail_page.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import 'catalog_image.dart';
 class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final MyStore store = VxState.store;
     return Scrollbar(
       child: VxBuilder(
         mutations: {SearchMutation},
