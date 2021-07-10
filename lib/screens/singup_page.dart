@@ -91,7 +91,7 @@ class SignUpPage extends StatelessWidget {
                     child: AnimatedContainer(
                       duration: Duration(seconds: 1),
                       width: 150,
-                      height: 50,
+                      height: 40,
                       alignment: Alignment.center,
                       child: Text(
                         "SignUp",
