@@ -1,3 +1,4 @@
+import 'package:catalog/utils/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -74,6 +75,9 @@ class SignUpPage extends StatelessWidget {
                 color: context.theme.buttonColor,
                 borderRadius: BorderRadius.circular(8),
                 child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, MyRoutes.loginRoute);
+                  },
                   child: AnimatedContainer(
                     duration: Duration(seconds: 1),
                     width: 150,
