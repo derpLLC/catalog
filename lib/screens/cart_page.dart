@@ -57,6 +57,8 @@ class _CartTotal extends StatelessWidget {
                 paymentConfigurationAsset: 'applepay.json',
                 paymentItems: _paymentItems,
                 style: ApplePayButtonStyle.black,
+                width: 200,
+                height: 50,
                 type: ApplePayButtonType.buy,
                 margin: const EdgeInsets.only(top: 15.0),
                 onPaymentResult: (data) {
@@ -70,6 +72,8 @@ class _CartTotal extends StatelessWidget {
                 paymentConfigurationAsset: 'googlepay.json',
                 paymentItems: _paymentItems,
                 style: GooglePayButtonStyle.black,
+                width: 200,
+                height: 50,
                 type: GooglePayButtonType.pay,
                 margin: const EdgeInsets.only(top: 15.0),
                 onPaymentResult: (data) {
