@@ -84,18 +84,7 @@ class _CartTotal extends StatelessWidget {
                 ),
               ),
             ],
-          )
-          // ElevatedButton(
-          //   onPressed: () {
-          //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          //       content: "Buying not supported yet.".text.make(),
-          //     ));
-          //   },
-          //   style: ButtonStyle(
-          //       backgroundColor:
-          //           MaterialStateProperty.all(context.theme.buttonColor)),
-          //   child: "Buy".text.white.make(),
-          // ).w32(context)
+          ),
         ],
       ),
     );
