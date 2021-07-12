@@ -76,7 +76,7 @@ Run the app
 
 ## Issues
 
-Please file issues, bugs, or feature requests in our [issue tracker](https://github.com/derpLLC/super-octo-fiesta/issues/new/choose).
+Please file issues, bugs, or feature requests in our [issue tracker](https://github.com/Ayushd70/catalog/issues/new/choose).
 
 ## License
 
