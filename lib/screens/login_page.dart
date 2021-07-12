@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                         foregroundColor:
                             MaterialStateProperty.all(context.accentColor),
                       ),
-                      child: "Sing Up".text.headline6(context).make(),
+                      child: "Sign Up".text.headline6(context).make(),
                     ),
                   ],
                 ),
