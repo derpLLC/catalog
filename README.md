@@ -4,6 +4,30 @@ Catalog App is a cross platform application and marketplace where people can buy
 
 > *Note*: Catalog App is still under development and some features, functionality might not be available yet.
 
+## Screenshots
+
+### Light Theme
+<p align="center">
+  <img width="32%" src="assets/screenshots/login_light.png?raw=true">
+  <img width="32%" src="assets/screenshots/signup_light.png?raw=true">
+  <img width="32%" src="assets/screenshots/home_light.png?raw=true">
+  <img width="32%" src="assets/screenshots/search_light.png?raw=true">
+  <img width="32%" src="assets/screenshots/cart_light.png?raw=true">
+  <img width="32%" src="assets/screenshots/gpay_light.png?raw=true">
+
+</p>
+
+### Dark Theme
+<p align="center">
+  <img width="32%" src="assets/screenshots/login_dark.png?raw=true">
+  <img width="32%" src="assets/screenshots/signup_dark.png?raw=true">
+  <img width="32%" src="assets/screenshots/home_dark.png?raw=true">
+  <img width="32%" src="assets/screenshots/search_dark.png?raw=true">
+  <img width="32%" src="assets/screenshots/cart_dark.png?raw=true">
+  <img width="32%" src="assets/screenshots/gpay_dark.png?raw=true">
+
+</p>
+
 ## Plugins
 
 **Table of contents:**
@@ -12,9 +36,9 @@ The libraries that this app is using as of now:
 - [Font Awesome Icons (`font_awesome_flutter`)](https://pub.dev/packages/font_awesome_flutter)
 - [Google Fonts (`google_fonts`)](https://pub.dev/packages/google_fonts)
 - [VelocityX (`velocity_x`)](https://pub.dev/packages/velocity_x)
-- [HTTP ('http')](https://pub.dev/packages/http)
-- [Url Strategy ('url_strategy')](https://pub.dev/packages/url_strategy)
-- [Pay ('pay')](https://pub.dev/packages/pay)
+- [HTTP (`http`)](https://pub.dev/packages/http)
+- [Url Strategy (`url_strategy`)](https://pub.dev/packages/url_strategy)
+- [Pay (`pay`)](https://pub.dev/packages/pay)
 
 ---
 
