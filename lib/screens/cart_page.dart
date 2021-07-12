@@ -69,7 +69,7 @@ class _CartTotal extends StatelessWidget {
                 ),
               ),
               GooglePayButton(
-                paymentConfigurationAsset: 'googlepay.json',
+                paymentConfigurationAsset: 'gpay.json',
                 paymentItems: _paymentItems,
                 style: GooglePayButtonStyle.black,
                 width: 200,
