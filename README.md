@@ -59,7 +59,7 @@ Then run the following commands
 Clone the project
 
 ```bash
-  git clone https://github.com/Ayushd70/catalog
+  git clone https://github.com/derpLLC/catalog
 ```
 
 Go to the project directory
@@ -76,7 +76,7 @@ Run the app
 
 ## Issues
 
-Please file issues, bugs, or feature requests in our [issue tracker](https://github.com/Ayushd70/catalog/issues/new/choose).
+Please file issues, bugs, or feature requests in our [issue tracker](https://github.com/derpLLC/catalog/issues/new/choose).
 
 ## License
 
